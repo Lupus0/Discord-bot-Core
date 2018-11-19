@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DiscordBot_Core.Storage.implementations;
+using DiscordBot_Core.Storage;
+using System;
 
 namespace DiscordBot_Core
 {
@@ -6,7 +8,9 @@ namespace DiscordBot_Core
     {
         private static void Main()
         {
+            Unity.RegisterTypes();
             Console.WriteLine("Hello, Discord!");
         }
     }
 }
+
