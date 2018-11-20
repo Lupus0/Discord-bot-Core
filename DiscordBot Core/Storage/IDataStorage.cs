@@ -6,6 +6,4 @@
 
         T RestoreObject<T>(string key);
     }
-
 }
-

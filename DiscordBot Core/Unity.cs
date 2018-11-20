@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Unity;
+using Unity.Lifetime;
 using Unity.Resolution;
 
 namespace DiscordBot_Core
@@ -25,7 +26,7 @@ namespace DiscordBot_Core
         public static void RegisterTypes()
         {
             _container = new UnityContainer();
-            _container.RegisterType<IDataStorage, InMemoryStorage>();
+            _container.RegisterType<IDataStorage, InMemoryStorage>(new ContainerControlledLifetimeManager());
         }
 
         public static T Resolve<T>()
