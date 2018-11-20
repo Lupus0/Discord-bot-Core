@@ -1,8 +1,8 @@
 ﻿using DiscordBot_Core.Storage.implementations;
 using DiscordBot_Core.Storage;
 using System;
-using Discord.WebSocket;
-using System.Threading.Tasks;
+using DiscordBot_Core.Discord.Entities;
+using DiscordBot_Core.Discord;
 
 namespace DiscordBot_Core
 {
@@ -12,6 +12,12 @@ namespace DiscordBot_Core
         {
             Unity.RegisterTypes();
             Console.WriteLine("Hello, Discord!");
+
+            var discordBotConfig = new BotConfig
+            {
+                Token = "ABC",
+                SocketConfig = SocketConfig.GetDefault()
+            };
         }
     }
 }
