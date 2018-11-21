@@ -27,6 +27,8 @@ namespace DiscordBot_Core
         {
             _container = new UnityContainer();
             _container.RegisterType<IDataStorage, InMemoryStorage>(new ContainerControlledLifetimeManager());
+            _container.RegisterType<ILogger, logger>(new ContainerControlledLifetimeManager());
+            _container.RegisterType<Discord.Connection>(new ContainerControlledLifetimeManager());
         }
 
         public static T Resolve<T>()
