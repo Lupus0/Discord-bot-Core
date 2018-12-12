@@ -335,5 +335,4 @@ ASALocalRun/
 
 # Application directory
 Config/
-vscode/
-vs/
+.vscode/
