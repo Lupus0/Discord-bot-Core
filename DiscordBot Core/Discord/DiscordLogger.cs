@@ -19,5 +19,6 @@ namespace DiscordBot_Core.Discord
             _logger.Log(logMsg.Message);
             return Task.CompletedTask;
         }
+
     }
 }
